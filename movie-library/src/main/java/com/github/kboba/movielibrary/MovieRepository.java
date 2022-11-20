@@ -18,4 +18,9 @@ public class MovieRepository {
                 BeanPropertyRowMapper.newInstance(Movie.class));
     }
 
+    public Movie getById(int id){
+        return jdbcTemplate.queryForObject(
+                "SELECT id, title, director, rating FROM movie WHERE id = ?",
+                BeanPropertyRowMapper.newInstance(Movie.class), id);
+    }
 }
