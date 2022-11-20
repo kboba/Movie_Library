@@ -23,4 +23,14 @@ public class MovieRepository {
                 "SELECT id, title, director, rating FROM movie WHERE id = ?",
                 BeanPropertyRowMapper.newInstance(Movie.class), id);
     }
+
+    public int add(List<Movie> movies) {
+        movies.forEach(movie -> jdbcTemplate.update(
+                "INSERT INTO movie(title, director, rating) VALUES(?, ?, ?) ",
+                movie.getTitle(), movie.getDirector(), movie.getRating()
+                ));
+
+        return 1;
+    }
+
 }
