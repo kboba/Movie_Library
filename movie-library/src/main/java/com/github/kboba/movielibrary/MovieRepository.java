@@ -38,4 +38,8 @@ public class MovieRepository {
                 movie.getTitle(), movie.getDirector(), movie.getRating(), movie.getId());
     }
 
+    public int delete(int id) {
+        return jdbcTemplate.update("DELETE FROM movie WHERE id=?", id);
+    }
+
 }
