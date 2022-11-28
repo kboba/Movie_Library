@@ -1,11 +1,11 @@
-CREATE SCHEMA 'movie_library';
+CREATE SCHEMA movie_library;
 
-CREATE TABLE 'movie_library'.'movie' (
-  'id' INT NOT NULL AUTO_INCREMENT,
-  'title' VARCHAR(100) NULL,
-  'director' VARCHAR(45) NULL,
-  'rating' INT NULL,
-  PRIMARY KEY ('id'));
+CREATE TABLE movie_library.movie (
+  id INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(100) NULL,
+  director VARCHAR(45) NULL,
+  rating INT NULL,
+  PRIMARY KEY (id));
 
 USE movie_library;
 
