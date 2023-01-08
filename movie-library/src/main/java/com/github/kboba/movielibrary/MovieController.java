@@ -11,21 +11,25 @@ public class MovieController {
     @Autowired
     MovieRepository movieRepository;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/movies")
     public List<Movie> getAll() {
         return movieRepository.getAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/movies/{id}")
     public Movie getById(@PathVariable("id") int id) {
         return movieRepository.getById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/movies")
     public int add (@RequestBody List<Movie> movies) {
         return movieRepository.add(movies);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/movies/{id}")
     public int update(@PathVariable("id") int id, @RequestBody Movie updatedMovie) {
         Movie movie = movieRepository.getById(id);
@@ -39,6 +43,7 @@ public class MovieController {
             return -1;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PatchMapping("/movies/{id}")
     public int partiallyUpdate(@PathVariable("id") int id, @RequestBody Movie updatedMovie) {
         Movie movie = movieRepository.getById(id);
@@ -52,6 +57,7 @@ public class MovieController {
             return -1;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/movies/{id}")
     public int delete(@PathVariable("id") int id) {
         return movieRepository.delete(id);
