@@ -34,7 +34,7 @@ public class MovieRepository {
     }
 
     public int update(Movie movie) {
-        return jdbcTemplate.update("UPDATE movie SET title=?, director=? rating=?, WHERE id=?",
+        return jdbcTemplate.update("UPDATE movie SET title=?, director=?, rating=? WHERE id=?",
                 movie.getTitle(), movie.getDirector(), movie.getRating(), movie.getId());
     }
 

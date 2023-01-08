@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left theme-text-color">Add/update movie</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="form-floating  mb-3 mt-3"> 
+        <input value='{{movie.title}}' type="text" [(ngModel)]='movie.title' class="form-control">
+        <label for="title">Title</label>
+    </div>
+    <div class="form-floating  mb-3 mt-3"> 
+        <input value='{{movie.director}}' type="text" [(ngModel)]='movie.director' class="form-control">
+        <label for="director">Director</label>
+    </div>
+    <div class="form-floating  mb-3 mt-3"> 
+        <input value='{{movie.rating}}' type="number" [(ngModel)]='movie.rating' class="form-control">
+        <label for="rating">Rating</label>
+    </div>
+    <button type="submit" class="btn btn-dark float-end" (click)="addOrUpdateMovie()">Add/Update</button>
+</div>

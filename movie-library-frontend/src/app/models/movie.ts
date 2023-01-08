@@ -1,5 +1,5 @@
 export class Movie{
-    id?: number;
+    id?: number | null;
     title?: string;
     director?: string;
     rating?: number;
