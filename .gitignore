@@ -21,3 +21,59 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Created by https://www.toptal.com/developers/gitignore/api/angular,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=angular,visualstudiocode
+
+### Angular ###
+## Angular ##
+# compiled output
+movie-library-frontend/dist/
+movie-library-frontend/tmp/
+movie-library-frontend/app/**/*.js
+movie-library-frontend/app/**/*.js.map
+
+# dependencies
+movie-library-frontend/node_modules/
+movie-library-frontend/bower_components/
+
+# IDEs and editors
+.idea/
+
+# misc
+movie-library-frontend/.sass-cache/
+movie-library-frontend/connect.lock/
+movie-library-frontend/coverage/
+movie-library-frontend/libpeerconnection.log/
+movie-library-frontend/npm-debug.log
+movie-library-frontend/testem.log
+movie-library-frontend/typings/
+movie-library-frontend/.angular/
+
+# e2e
+movie-library-frontend/e2e/*.js
+movie-library-frontend/e2e/*.map
+
+# System Files
+movie-library-frontend/.DS_Store/
+
+### VisualStudioCode ###
+movie-library-frontend/.vscode/*
+!movie-library-frontend/.vscode/settings.json
+!movie-library-frontend/.vscode/tasks.json
+!movie-library-frontend/.vscode/launch.json
+!movie-library-frontend/.vscode/extensions.json
+!movie-library-frontend/.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+movie-library-frontend/.history/
+
+# Built Visual Studio Code Extensions
+movie-library-frontend/*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+movie-library-frontend/.history
+movie-library-frontend/.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/angular,visualstudiocode

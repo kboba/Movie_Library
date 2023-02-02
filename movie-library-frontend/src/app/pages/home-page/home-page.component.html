@@ -1,0 +1,30 @@
+<h3 class="d-flex justify-content-center m-3">Movie list</h3>
+<button type="button" class="btn btn-primary" (click)="openMovieModal(template)">Add movie</button>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Director</th>
+      <th scope="col">Rating</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{movie.id}}</td>
+      <td>{{movie.title}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.rating}}</td>
+      <td>
+        <button type="button" class="btn btn-warning mx-1" (click)="updateMovie(template, movie)">Edit</button>
+        <button type="button" class="btn btn-danger mx-1" (click)="deleteMovie(movie.id!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #template>
+  <app-movie-modal class="theme-bg-1 " [modalRef]="modalRef!" [movie]="movie" (reload)="getMovies()"></app-movie-modal>
+</ng-template>
