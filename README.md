@@ -4,3 +4,6 @@ Movie library application created with Spring Boot and MySQL DB running in Docke
 ## CRUD
 We created there basic create, read, update and delete operations on database by the use of Spring Framework.
 
+## Link to Instruction:
+[https://github.com/kboba/Movie_Library/blob/master/Instruction.pdf](Instruction)
+
